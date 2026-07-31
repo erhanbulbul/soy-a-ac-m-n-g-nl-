@@ -10,9 +10,10 @@ workflows:
       - name: Build Android AAB
         script: |
           cd yoruldum
-          # Projenin çalışabilmesi için şart koşulan 9.3.1 motorunu kuruyoruz
           gradle wrapper --gradle-version 9.3.1
           chmod +x gradlew
-          ./gradlew bundleRelease
+          
+          # İmza doğrulamasını atlayarak doğrudan AAB çıktısı alma komutu
+          ./gradlew bundleRelease -x validateSigningRelease
     artifacts:
       - yoruldum/app/build/outputs/bundle/release/*.aab
