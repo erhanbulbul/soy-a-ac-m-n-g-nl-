@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "529437202989",
+    "firebase_url": "https://soy-agaci-miras-gunlugu-default-rtdb.firebaseio.com",
+    "project_id": "soy-agaci-miras-gunlugu",
+    "storage_bucket": "soy-agaci-miras-gunlugu.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529437202989:android:f420642d989f73b1a0f6a4",
+        "android_client_info": {
+          "package_name": "com.aistudio.soyagaci.mirasgunlugu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529437202989-j3op8ck11rqm1s6t26idh21c7kgrnlss.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aistudio.soyagaci.mirasgunlugu",
+            "certificate_hash": "e24c78c4d04c7111d7a3d36198d4f58ac9c9e714"
+          }
+        },
+        {
+          "client_id": "529437202989-m8b86el36182mt1akm2urri9b0ttg4du.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKschumiWjNM0vzpQNuQqjaDIK_BGVrRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529437202989-m8b86el36182mt1akm2urri9b0ttg4du.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
