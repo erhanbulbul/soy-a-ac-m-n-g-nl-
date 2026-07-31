@@ -9,10 +9,12 @@ workflows:
     scripts:
       - name: Setup Gradle Wrapper and Build AAB
         script: |
-          cd dum
-          # Eksik olan gradle motorunu sıfırdan bulutta kuruyoruz
+          # Önce projenin en dışındayken gradle motorunu kuruyoruz
           gradle wrapper --gradle-version 8.2
-          chmod +x gradlew
-          ./gradlew bundleRelease
+          
+          # Şimdi dum klasörünün içine girip oradaki gradle yapılandırmasını tetikliyoruz
+          cd dum
+          chmod +x ../gradlew
+          ../gradlew bundleRelease
     artifacts:
       - dum/app/build/outputs/bundle/release/*.aab
