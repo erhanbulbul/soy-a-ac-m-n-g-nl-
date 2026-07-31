@@ -7,10 +7,12 @@ workflows:
       events:
         - push
     scripts:
-      - name: Build Android AAB
+      - name: Setup Gradle Wrapper and Build AAB
         script: |
           cd dum
-          chmod +x app/gradlew || chmod +x gradlew || true
-          ./gradlew bundleRelease || ./app/gradlew bundleRelease || cd app && ./gradlew bundleRelease
+          # Eksik olan gradle motorunu sıfırdan bulutta kuruyoruz
+          gradle wrapper --gradle-version 8.2
+          chmod +x gradlew
+          ./gradlew bundleRelease
     artifacts:
-      - "**/build/outputs/bundle/release/*.aab"
+      - dum/app/build/outputs/bundle/release/*.aab
