@@ -10,6 +10,9 @@ workflows:
       - name: Setup Gradle and Build AAB
         script: |
           cd yoruldum
-          gradle bundleRelease
+          # Projenin tam olarak uyumlu olduğu Gradle sürümünü buluta kuruyoruz
+          gradle wrapper --gradle-version 8.9.1
+          chmod +x gradlew
+          ./gradlew bundleRelease
     artifacts:
       - yoruldum/app/build/outputs/bundle/release/*.aab
