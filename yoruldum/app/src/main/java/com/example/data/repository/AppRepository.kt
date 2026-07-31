@@ -733,7 +733,7 @@ class AppRepository(private val dao: AppDao) {
             } catch (e: Exception) {
                 emptyList()
             }
-            val aiResponse = GeminiLegacyService.generateDeceasedPersonaWithJournals(
+            val aiResponse = GeminiLegacyService.generateText(
                 deceasedName = familyMember.name,
                 relationship = familyMember.relationship,
                 journals = journals,
@@ -790,7 +790,7 @@ class AppRepository(private val dao: AppDao) {
                             }
                         } else {
                             val lang = userProfileSync?.languageCode ?: "tr"
-                            val replyText = GeminiLegacyService.generateLivingMemberResponse(
+                            val replyText = GeminiLegacyService.generateText(
                                 memberName = familyMember.name,
                                 relationship = familyMember.relationship,
                                 notes = familyMember.notes,
@@ -812,7 +812,7 @@ class AppRepository(private val dao: AppDao) {
                 }
             } else {
                 val lang = userProfileSync?.languageCode ?: "tr"
-                val replyText = GeminiLegacyService.generateLivingMemberResponse(
+                val replyText = GeminiLegacyService.generateText(
                     memberName = familyMember.name,
                     relationship = familyMember.relationship,
                     notes = familyMember.notes,
