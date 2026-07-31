@@ -22,7 +22,7 @@ object GeminiLegacyService {
         languageCode: String
     ): String = withContext(Dispatchers.IO) {
         val apiKey = BuildConfig.GEMINI_API_KEY
-        if (apiKey.isEmpty() || apiKey == "MY_GEMINI_API_KEY") {
+        if (apiKey.isEmpty() || apiKey == "AQ.Ab8RN6IipBRRj2g8d75-lbD9s2UACIgX1_c_lS3keZdvp6M3CQ") {
             return@withContext getFallbackPersonaResponse(deceasedName, relationship, userMessage, languageCode)
         }
 
