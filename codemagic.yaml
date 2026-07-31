@@ -7,10 +7,12 @@ workflows:
       events:
         - push
     scripts:
-      - name: Build Android AAB Directly
+      - name: Build Android AAB
         script: |
           cd yoruldum
-          # İnternetten indirme yapmadan doğrudan sistemin küresel motorunu çalıştırıyoruz
-          gradle bundleRelease
+          # Projenin çalışabilmesi için şart koşulan 9.3.1 motorunu kuruyoruz
+          gradle wrapper --gradle-version 9.3.1
+          chmod +x gradlew
+          ./gradlew bundleRelease
     artifacts:
       - yoruldum/app/build/outputs/bundle/release/*.aab
