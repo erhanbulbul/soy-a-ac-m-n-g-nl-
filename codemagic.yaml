@@ -9,8 +9,7 @@ workflows:
     scripts:
       - name: Setup Gradle and Build AAB
         script: |
-          cd dum
-          # Doğrudan sistemin kendi gradle motorunu kullanarak derlemeyi tetikliyoruz
+          cd yoruldum
           gradle bundleRelease
     artifacts:
-      - dum/app/build/outputs/bundle/release/*.aab
+      - yoruldum/app/build/outputs/bundle/release/*.aab
