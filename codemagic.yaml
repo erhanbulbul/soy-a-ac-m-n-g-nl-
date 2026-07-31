@@ -1,0 +1,18 @@
+workflows:
+  android-workflow:
+    name: Android AAB Build
+    max_build_duration: 60
+    instance_type: mac_mini_m1
+    environment:
+      android_sdk: latest
+    triggering:
+      events:
+        - push
+    scripts:
+      - name: Build Android AAB
+        script: |
+          cd yoruldum
+          chmod +x gradlew
+          ./gradlew bundleRelease
+    artifacts:
+      - yoruldum/app/build/outputs/bundle/release/*.aab
