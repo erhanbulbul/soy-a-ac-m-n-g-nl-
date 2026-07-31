@@ -1,6 +1,0 @@
-{
-  "name": "SoyAğacı Miras Günlüğü",
-  "description": "Soya ağacı, miras vasiyet günlüğü, 6 haneli takip kodu, vefat sonrası dijital hafıza ve sohbet uygulaması",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
