@@ -13,7 +13,7 @@ workflows:
           gradle wrapper --gradle-version 9.3.1
           chmod +x gradlew
           
-          # İmza doğrulamasını atlayarak doğrudan AAB çıktısı alma komutu
+          # İmza kontrolünü tamamen pas geçerek AAB paketini üretiyoruz
           ./gradlew bundleRelease -x validateSigningRelease
     artifacts:
       - yoruldum/app/build/outputs/bundle/release/*.aab
