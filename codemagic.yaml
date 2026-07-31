@@ -9,8 +9,8 @@ workflows:
     scripts:
       - name: Build Android AAB
         script: |
-          cd yoruldum
-          chmod +x gradlew
-          ./gradlew bundleRelease
+          cd dum
+          chmod +x app/gradlew || chmod +x gradlew || true
+          ./gradlew bundleRelease || ./app/gradlew bundleRelease || cd app && ./gradlew bundleRelease
     artifacts:
-      - yoruldum/app/build/outputs/bundle/release/*.aab
+      - "**/build/outputs/bundle/release/*.aab"
