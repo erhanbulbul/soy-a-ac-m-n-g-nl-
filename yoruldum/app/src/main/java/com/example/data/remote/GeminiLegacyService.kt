@@ -21,7 +21,7 @@ object GeminiLegacyService {
         userMessage: String,
         languageCode: String
     ): String = withContext(Dispatchers.IO) {
-        val apiKey = BuildConfig.AQ.Ab8RN6IipBRRj2g8d75-lbD9s2UACIgX1_c_lS3keZdvp6M3CQ
+        val apiKey = AQ.Ab8RN6IipBRRj2g8d75-lbD9s2UACIgX1_c_lS3keZdvp6M3CQ
         if (apiKey.isEmpty() || apiKey == "GEMINI_API_KEY") {
             return@withContext getFallbackPersonaResponse(deceasedName, relationship, userMessage, languageCode)
         }
@@ -102,7 +102,7 @@ object GeminiLegacyService {
         userMessage: String,
         languageCode: String
     ): String = withContext(Dispatchers.IO) {
-        val apiKey = BuildConfig.AQ.Ab8RN6IipBRRj2g8d75-lbD9s2UACIgX1_c_lS3keZdvp6M3CQ
+        val apiKey = AQ.Ab8RN6IipBRRj2g8d75-lbD9s2UACIgX1_c_lS3keZdvp6M3CQ
         if (apiKey.isEmpty() || apiKey == "MY_GEMINI_API_KEY") {
             return@withContext getFallbackPersonaResponse(deceasedName, relationship, userMessage, languageCode)
         }
@@ -196,7 +196,7 @@ object GeminiLegacyService {
         userMessage: String,
         languageCode: String
     ): String = withContext(Dispatchers.IO) {
-        val apiKey = BuildConfig.AQ.Ab8RN6IipBRRj2g8d75-lbD9s2UACIgX1_c_lS3keZdvp6M3CQ
+        val apiKey = AQ.Ab8RN6IipBRRj2g8d75-lbD9s2UACIgX1_c_lS3keZdvp6M3CQ
         if (apiKey.isNotEmpty() && apiKey != "MY_GEMINI_API_KEY") {
             try {
                 val endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$apiKey"
