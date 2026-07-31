@@ -7,14 +7,10 @@ workflows:
       events:
         - push
     scripts:
-      - name: Setup Gradle Wrapper and Build AAB
+      - name: Setup Gradle and Build AAB
         script: |
-          # Önce projenin en dışındayken gradle motorunu kuruyoruz
-          gradle wrapper --gradle-version 8.2
-          
-          # Şimdi dum klasörünün içine girip oradaki gradle yapılandırmasını tetikliyoruz
           cd dum
-          chmod +x ../gradlew
-          ../gradlew bundleRelease
+          # Doğrudan sistemin kendi gradle motorunu kullanarak derlemeyi tetikliyoruz
+          gradle bundleRelease
     artifacts:
       - dum/app/build/outputs/bundle/release/*.aab
